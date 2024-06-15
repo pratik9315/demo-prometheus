@@ -1,0 +1,15 @@
+# global settings
+global:
+  scrape_interval: 5s # scrapes metrics from promlabs every 5 seconds. The default is 1 minute.
+
+scrape_configs: # tells promtheus which targets it should monitor, how it should discover and scrape them, and what labels to apply.
+- job_name: "prometheus" # job label is used to group together multiple targets of same type.
+  static_configs:
+  - targets:
+    - localhost:9090 # scrapes prometheus on http://localhost:9090
+- job_name: "demo" # public targets
+  static_configs:
+  - targets:
+    - demo.promlabs.com:10000
+    - demo.promlabs.com:10001
+    - demo.promlabs.com:10002
