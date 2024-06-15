@@ -5,7 +5,7 @@ This repository contains a basic Prometheus configuration that monitors some dem
 For storage reasons, the repository hides the following files:
 
 - Promtool and Prometheus .exe files
-- The "data/" folder
+- The "data/" subdirectory that stores the collected metrics
 
 It also includes some Grafana visualization images and relevant Prometheus visuals.
 
